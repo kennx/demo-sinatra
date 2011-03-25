@@ -4,4 +4,7 @@
 
 1.  Ruby 1.9.2
 2.  install gems activerecord, sinatra, haml, sqlite3-ruby
+3.  rake db_up
+4.  rackup config.ru
+5.  http://localhost:9292
 
