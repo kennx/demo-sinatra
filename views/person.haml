@@ -1,0 +1,15 @@
+%form(method='post' action='add' id='user_data')
+  %fieldset
+    %div
+      %label USN
+      %input(type='text' name='usn' id='usn')
+    %div
+      %label Name
+      %input(type='text' name='name' id='name')
+
+    %div.controls
+      %input(type='submit' value ='Add' id='btn-add')
+
+%div
+  Show list
+  %a(href='/') Click here!

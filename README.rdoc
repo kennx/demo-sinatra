@@ -1,0 +1,7 @@
+= Under Construction
+
+== Prerequisites
+
+1.  Ruby 1.9.2
+2.  install gems activerecord, sinatra, haml, sqlite3-ruby
+
