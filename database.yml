@@ -1,0 +1,4 @@
+development:
+  adapter:  mysql
+  host:     localhost
+  database: test

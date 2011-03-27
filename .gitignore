@@ -2,3 +2,4 @@ Gemfile*
 *.log
 /tmp
 /db/demo*
+s*.yml

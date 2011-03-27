@@ -1,10 +1,23 @@
-= Under Construction
+= Very Boring Sinatra App to Demonstrate Notifications
 
 == Prerequisites
 
 1.  Ruby 1.9.2
-2.  install gems activerecord, sinatra, haml, sqlite3-ruby
-3.  rake db_up
-4.  rackup config.ru
-5.  http://localhost:9292
+2.  Install gems activerecord, sinatra, haml, sqlite3-ruby
+3.  Install gem mysql*
+3.  Run           rake db_up
+4.  Run           rackup config.ru
+5.  Run app at:   http://localhost:9292
 
+
+== How to install mysql gem on Snow Leopard:
+
+If using bundler,
+  1.  edit Gemfile to add line for mysql
+  2.  export ARCHFLAGS="-arch x86_64"
+  3.  bundle config build.mysql --with-mysql-config=/usr/local/mysql/bin/mysql_config
+  4.  bundle install
+
+If not using bundler,
+
+    env ARCHFLAGS="-arch x86_64" gem install mysql -- --with-mysql-config=/usr/local/mysql/bin/mysql_config

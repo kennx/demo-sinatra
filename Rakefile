@@ -30,7 +30,7 @@ task :show_db do
   db_connect
   puts "People\n------"
   begin
-    Person.find(:all).each {|p| puts "name:#{p.name}  usn:#{p.usn}"}
+    Person.find(:all).each {|p| puts "name:#{p.first_name} #{p.last_name}  usn:#{p.usn}"}
   rescue
     puts 'people find failed'
   end

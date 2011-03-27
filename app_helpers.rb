@@ -11,8 +11,16 @@ module AppHelpers
   end
 
   def create_person(params)
-    person = Person.new(:name => params['name'], :usn => params['usn'])
+    person = Person.new(params)
     person.save
     format_errors(person)
+  end
+
+  def find_people(params)
+    unless params[:usn].empty?
+      Person.find_all_by_usn(params[:usn])
+    else
+      Person.find_all_by_first_name_and_last_name(params[:first_name],params[:last_name])
+    end
   end
 end

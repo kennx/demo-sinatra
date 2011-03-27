@@ -14,7 +14,8 @@ module PeopleList
     set :public, "#{dir}/public"
     set :views, "#{dir}/views"
 
-    ActiveRecord::Base.logger = Logger.new("ar.log")
+    file_name = "#{dir}/logs/ar.log"
+    ActiveRecord::Base.logger = Logger.new(file_name)
     file_name = "#{dir}/logs/sql.log"
     ActiveSupport::Notifications.subscribe /^sql\./ do |*args| 
       self.log_query(file_name, args)
@@ -56,6 +57,15 @@ module PeopleList
     post '/add' do
       @errors = create_person(params)
       @people = Person.find(:all)
+      haml :index
+    end
+
+    get '/find' do
+      haml :find
+    end
+
+    post '/fetch' do
+      @people = find_people(params)
       haml :index
     end
 

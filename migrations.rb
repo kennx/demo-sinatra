@@ -3,11 +3,13 @@ module Migrations
   def migrate_001_up
     ActiveRecord::Schema.define do
       create_table :people do |t|
-        t.text :name
-        t.text :usn
+        t.string :first_name
+        t.string :last_name
+        t.string :usn
         t.timestamps
       end 
       add_index :people, :usn
+      add_index :people, :last_name
     end
   end
 
