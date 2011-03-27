@@ -5,8 +5,8 @@
 1.  Ruby 1.9.2
 2.  Install gems activerecord, sinatra, haml, sqlite3-ruby
 3.  Install gem mysql*
-3.  Run           rake db_up
-4.  Run           rackup config.ru
+3.  Run command:      rake db_up
+4.  Runi command:     rackup config.ru
 5.  Run app at:   http://localhost:9292
 
 
